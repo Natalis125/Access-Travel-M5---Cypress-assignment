@@ -51,13 +51,12 @@ describe('Positive tests: Jerusalem, London, and New York are on the list, and a
       it('choosing a valid number of children  ', () => {
         cy.visit(hotel_list_page_url)
         cy.get('#Filter_ChildrenNum').should('be.visible')
-        cy.get('#Filter_ChildrenNum').clear
-        cy.get('#Filter_ChildrenNum').type ('1').should('have.value','1',{force:true})
-        
-        //cy.get('#Filter_ChildrenNum').select('1',{force:true})
-        //cy.get('class="row children-age"').should('be.visible')
+        cy.get('#Filter_ChildrenNum').clear().type('1').should('have.value','1',{force:true})
+        cy.get('.hotels-wrap').click()
+        cy.get('[class="row children-age"]').should('be.visible')
+        cy.get('[name="Filter.ChildrensAge[0]').clear().type('1',{force:true})
 
       })
 
-
+    
     })
