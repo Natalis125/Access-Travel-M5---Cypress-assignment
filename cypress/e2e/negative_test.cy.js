@@ -1,4 +1,4 @@
-describe('Negative tests: Negative Test - dates: invalid dates will trigger an error', () => {
+describe('Negative tests: invalid dates will trigger an error', () => {
 
 
     const hotel_list_page_url = 'https://www.accesstravel.com/en-US/Hotel/List'
